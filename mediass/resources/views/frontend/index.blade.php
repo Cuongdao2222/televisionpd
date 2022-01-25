@@ -945,7 +945,7 @@
 
                $product_sale =  DB::table('sale_product')->join('products', 'sale_product.product_id', '=', 'products.id')->get();?>
 
-               @if(count($product_sale))
+               @if(count($product_sale)>0)
                
                 <div class="listproduct slider-promo owl-carousel" data-size="20">
 
@@ -960,11 +960,7 @@
                             </div>
                             <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='Giảm Sốc' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>Giảm Sốc</span></p>
                             <h3>{{ $value->Name }}</h3>
-                            <!-- <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
-                            <div class="box-p">
-                                <p class="price-old black">12.190.000&#x20AB;</p>
-                                <span class="percent">-27%</span>
-                            </div> -->
+                           
                             <strong class="price">{{  str_replace(',' ,'.', number_format($value->Price))  }}&#x20AB;</strong>
                             <div class="item-rating">
                                 <p>
@@ -983,7 +979,7 @@
                     
                 </div>
                 @endif
-                <a class="readmore-btn" href="https://www.dienmayxanh.com/flashsale#game"><span>Xem tất cả</span></a>
+                <!-- <a class="readmore-btn" href="https://www.dienmayxanh.com/flashsale#game"><span>Xem tất cả</span></a> -->
             </div>
             <!-- End -->
             <!-- Bạn đã xem -->
@@ -996,11 +992,13 @@
 
                 $group = App\Models\groupProduct::get();
 
-               
              ?>   
             @for($i =0; $i <count($group); $i++)
 
-                <?php $data = App\Models\product::where('Group_id', $group[$i]->id)->get(); ?>
+                <?php
+                    $all_Product = DB::table('group_product')->join('products', 'group_product.id', '=', 'products.Group_id')->select('products.id')->where('group_product.id', $group[$i]->id)->get();
+                    $data =  DB::table('hot')->join('products', 'hot.product_id', '=', 'products.id')->where('hot.group_id', $group[$i]->id)->get();
+                ?>
             <div class="box-common _cate_1942">
                 <ul class="box-common__tab">
                     <li class="active-tab" data-cate-id="1942">{{  @$group[$i]->name }}</li>
@@ -1047,7 +1045,7 @@
                             @endif
                             
                         </div>
-                        <!-- <a class="readmore-txt blue" href="/tivi"><span>Xem tất cả <b>147</b> Tivi</span></a> -->
+                        <a class="readmore-txt blue" href="{{ route('category-product', @$group[$i]->link)  }}"><span>Xem tất cả <b>{{ @count($all_Product)}}</b> {{ @$group[$i]->name }}</span></a>
                     </div>
                 </div>
             </div>

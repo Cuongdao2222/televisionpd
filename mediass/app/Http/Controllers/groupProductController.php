@@ -58,6 +58,12 @@ class groupProductController extends AppBaseController
 
         $groupProduct = $this->groupProductRepository->create($input);
 
+
+        if(empty($input['link'])){
+
+            $input['link'] = convertSlug($input['name']);
+        }
+
         Flash::success('Group Product saved successfully.');
 
         return redirect(route('groupProducts.index'));
@@ -113,7 +119,13 @@ class groupProductController extends AppBaseController
      */
     public function update($id, UpdategroupProductRequest $request)
     {
+
+        $input = $request->all();
+
         $groupProduct = $this->groupProductRepository->find($id);
+
+        $input['link'] = convertSlug($input['name']);
+       
 
         if (empty($groupProduct)) {
             Flash::error('Group Product not found');
@@ -121,7 +133,8 @@ class groupProductController extends AppBaseController
             return redirect(route('groupProducts.index'));
         }
 
-        $groupProduct = $this->groupProductRepository->update($request->all(), $id);
+
+        $groupProduct = $this->groupProductRepository->update($input, $id);
 
         Flash::success('Group Product updated successfully.');
 

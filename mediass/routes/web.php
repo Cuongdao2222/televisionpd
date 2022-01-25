@@ -22,6 +22,10 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/category/{slug}', 'Frontend\categoryController@index')->name('category-product');
+
+Route::get('/detail', 'Frontend\categoryController@details');
+
 
 
 Route::group(['prefix' => 'admins','middleware' => 'auth'], function() {
