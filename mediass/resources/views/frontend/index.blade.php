@@ -936,22 +936,36 @@
                 <div class="prd-promo__top clearfix" >
                     <a data-cate="0" data-place="1868" href="https://www.dienmayxanh.com/flashsale#game" onclick="jQuery.ajax({ url: '/bannertracking?bid=47543&r='+ (new Date).getTime(), async: true, cache: false });"><img style="cursor:pointer" src="https://cdn.tgdd.vn/2022/01/banner/Sansale-desk-1200x90-3.png" alt="Theme Giáng Sinh DMX Desk" width="1200" height="90"></a>                
                 </div>
+
+
+
+               <!--  Sale -->
+
+               <?php  
+
+               $product_sale =  DB::table('sale_product')->join('products', 'sale_product.product_id', '=', 'products.id')->get();?>
+
+               @if(count($product_sale))
+               
                 <div class="listproduct slider-promo owl-carousel" data-size="20">
-                    <div class="item" data-id="227121" data-pos="1">
+
+                    @foreach($product_sale as  $value)
+
+                    <div class="item">
                         <a href='/may-giat/may-giat-lg-inverter-85-kg-fv1408s4w' class=" main-contain" data-s="OnlineSavingCMS" data-site="2" data-pro="3" data-cache="False" data-name="M&#xE1;y gi&#x1EB7;t LG Inverter 8.5 kg FV1408S4W" data-id="227121" data-price="8840000.0" data-brand="LG" data-cate="M&#xE1;y gi&#x1EB7;t" data-box="BoxHome">
                             <div class="item-label">
                             </div>
                             <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/1944/227121/may-giat-lg-inverter-85-kg-fv1408s4w-8-300x300.jpg" class="lazyload" alt="LG Inverter 8.5 Kg FV1408S4W" width=210 height=210>
+                                <img data-src="{{ $value->Image }}" class="lazyload" alt="LG Inverter 8.5 Kg FV1408S4W" width=210 height=210>
                             </div>
                             <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='Giảm Sốc' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>Giảm Sốc</span></p>
-                            <h3>LG Inverter 8.5 Kg FV1408S4W</h3>
-                            <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
+                            <h3>{{ $value->Name }}</h3>
+                            <!-- <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
                             <div class="box-p">
                                 <p class="price-old black">12.190.000&#x20AB;</p>
                                 <span class="percent">-27%</span>
-                            </div>
-                            <strong class="price">8.840.000&#x20AB;</strong>
+                            </div> -->
+                            <strong class="price">{{  str_replace(',' ,'.', number_format($value->Price))  }}&#x20AB;</strong>
                             <div class="item-rating">
                                 <p>
                                     <i class="icon-star"></i>
@@ -964,472 +978,15 @@
                             </div>
                         </a>
                     </div>
-                    <div class="item" data-id="110633" data-pos="2">
-                        <a href='/may-loc-nuoc/sunhouse-shr76210ck-10-loi' class=" main-contain" data-s="OnlineSavingCMS" data-site="2" data-pro="3" data-cache="False" data-name="M&#xE1;y l&#x1ECD;c n&#x1B0;&#x1EDB;c RO n&#xF3;ng ngu&#x1ED9;i l&#x1EA1;nh Sunhouse SHR76210CK 10 l&#xF5;i" data-id="110633" data-price="6990000.0" data-brand="Sunhouse" data-cate="M&#xE1;y l&#x1ECD;c n&#x1B0;&#x1EDB;c" data-box="BoxHome">
-                            <div class="item-label">
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/3385/110633/sunhouse-shr76210ck-10-loi-1-4-org1-300x300.jpg" class="lazyload" alt="M&#xE1;y l&#x1ECD;c n&#x1B0;&#x1EDB;c RO n&#xF3;ng ngu&#x1ED9;i l&#x1EA1;nh Sunhouse SHR76210CK 10 l&#xF5;i" width=210 height=210>
-                            </div>
-                            <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='100 SUẤT GIẢM SỐC' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>100 SUẤT GIẢM SỐC</span></p>
-                            <h3>Máy lọc nước RO nóng nguội lạnh Sunhouse SHR76210CK 10 lõi</h3>
-                            <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
-                            <div class="box-p">
-                                <p class="price-old black">9.490.000&#x20AB;</p>
-                                <span class="percent">-26%</span>
-                            </div>
-                            <strong class="price">6.990.000&#x20AB;</strong>
-                            <div class="item-rating">
-                                <p>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-dark"></i>
-                                </p>
-                                <p class="item-rating-total">233</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item" data-id="219668" data-pos="3">
-                        <a href='/dan-loa-dvd/jammy-am4218' class=" main-contain" data-s="OnlineSavingCMS" data-site="2" data-pro="3" data-cache="False" data-name="Loa k&#xE9;o Karaoke Jammy AM4218" data-id="219668" data-price="7110000.0" data-brand="JAMMY" data-cate="Loa" data-box="BoxHome">
-                            <div class="item-label">
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/2162/219668/jammy-am4218-18-300x300.jpg" class="lazyload" alt="Loa k&#xE9;o Karaoke Jammy AM4218" width=210 height=210>
-                            </div>
-                            <p class='result-label temp5'><img width='20' height='20' class='lazyload' alt='Tết 2022 Giảm Sốc' data-src='https://cdn.tgdd.vn/2020/10/content/icon5-50x50.png'><span>Tết 2022 Giảm Sốc</span></p>
-                            <h3>Loa kéo Karaoke Jammy AM4218</h3>
-                            <div class="item-compare">
-                                <span>600 W</span>
-                            </div>
-                            <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
-                            <div class="box-p">
-                                <p class="price-old black">8.890.000&#x20AB;</p>
-                                <span class="percent">-20%</span>
-                            </div>
-                            <strong class="price">7.110.000&#x20AB;</strong>
-                            <div class="item-rating">
-                                <p>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-dark"></i>
-                                </p>
-                                <p class="item-rating-total">4</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item" data-id="260078" data-pos="4">
-                        <a href='/may-ep-trai-cay/may-ep-cham-ava-jr-319' class=" main-contain" data-s="OnlineSavingCMS" data-site="2" data-pro="3" data-cache="False" data-name="M&#xE1;y &#xE9;p ch&#x1EAD;m AVA JR-319" data-id="260078" data-price="690000.0" data-brand="AVA" data-cate="M&#xE1;y &#xE9;p tr&#xE1;i c&#xE2;y" data-box="BoxHome">
-                            <div class="item-label">
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/2062/260078/may-ep-cham-AVA-JR-319-600x600.jpg" class="lazyload" alt="M&#xE1;y &#xE9;p ch&#x1EAD;m AVA JR-319" width=210 height=210>
-                            </div>
-                            <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='100 SUẤT GIẢM SỐC' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>100 SUẤT GIẢM SỐC</span></p>
-                            <h3>Máy ép chậm AVA JR-319</h3>
-                            <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
-                            <div class="box-p">
-                                <p class="price-old black">1.200.000&#x20AB;</p>
-                                <span class="percent">-42%</span>
-                            </div>
-                            <strong class="price">690.000&#x20AB;</strong>
-                        </a>
-                    </div>
-                    <div class="item" data-id="226358" data-pos="5">
-                        <a href='/tu-lanh/samsung-rt32k5932by-sv' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="False" data-name="T&#x1EE7; l&#x1EA1;nh Samsung Inverter 319 l&#xED;t RT32K5932BY/SV" data-id="226358" data-price="12490000.0" data-brand="Samsung" data-cate="T&#x1EE7; l&#x1EA1;nh" data-box="BoxHome">
-                            <div class="item-label">
-                                <span class="lb-tragop">Tra&#x309; go&#x301;p 0%</span>
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/1943/226358/samsung-rt32k5932by-sv-300x300.jpg" class="lazyload" alt="Samsung Inverter 319 l&#xED;t RT32K5932BY/SV" width=210 height=210>
-                                <img src="https://cdn.tgdd.vn/ValueIcons/Label_01-05.png" width="40" height="40" class="lazyload lbliconimg lbliconimg_1943 dmx" />
-                            </div>
-                            <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='Giảm sốc' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>Giảm sốc</span></p>
-                            <h3>Samsung Inverter 319 lít RT32K5932BY/SV</h3>
-                            <div class="box-p">
-                                <p class="price-old black">14.390.000&#x20AB;</p>
-                                <span class="percent">-13%</span>
-                            </div>
-                            <strong class="price">12.490.000&#x20AB;</strong>
-                            <p class="item-gift">Quà <b>900.000₫</b></p>
-                            <div class="item-rating">
-                                <p>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-dark"></i>
-                                </p>
-                                <p class="item-rating-total">15</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item" data-id="194394" data-pos="6">
-                        <a href='/may-nuoc-nong/ariston-sl2-20-rs-25-fe' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="False" data-name="M&#xE1;y n&#x1B0;&#x1EDB;c n&#xF3;ng gi&#xE1;n ti&#x1EBF;p Ariston 20 l&#xED;t 2500W SL2 20 RS 2.5 FE" data-id="194394" data-price="3320000.0" data-brand="Ariston" data-cate="M&#xE1;y n&#x1B0;&#x1EDB;c n&#xF3;ng" data-box="BoxHome">
-                            <div class="item-label">
-                                <span class="lb-tragop">Tra&#x309; go&#x301;p 0%</span>
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/1962/194394/may-nuoc-nong-ariston-sl2-20-rs-25-fe-9-300x300.jpg" class="lazyload" alt="M&#xE1;y n&#x1B0;&#x1EDB;c n&#xF3;ng gi&#xE1;n ti&#x1EBF;p Ariston SL2 20 RS 2.5 FE" width=210 height=210>
-                            </div>
-                            <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='GIẢM SỐC' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>GIẢM SỐC</span></p>
-                            <h3>Máy nước nóng gián tiếp Ariston 20 lít 2500W SL2 20 RS 2.5 FE</h3>
-                            <div class="item-compare">
-                                <span>2500W</span>
-                                <span>20 l&#xED;t</span>
-                            </div>
-                            <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
-                            <div class="box-p">
-                                <p class="price-old black">3.690.000&#x20AB;</p>
-                                <span class="percent">-10%</span>
-                            </div>
-                            <strong class="price">3.320.000&#x20AB;</strong>
-                            <p class="item-gift">Quà <b>400.000₫</b></p>
-                            <div class="item-rating">
-                                <p>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                </p>
-                                <p class="item-rating-total">177</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item" data-id="251584" data-pos="7">
-                        <a href='/xe-dap/pacific-carmeron-50-trang-den' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="True" data-name="Xe &#x111;&#x1EA1;p &#x111;&#x1ECB;a h&#xEC;nh MTB Pacific Carmeron 5.0 27.5 inch" data-id="251584" data-price="12152000.0" data-brand="Pacific" data-cate="Xe &#x111;&#x1EA1;p" data-box="BoxHome">
-                            <div class="item-label">
-                                <span class="lb-tragop">Tra&#x309; go&#x301;p 0%</span>
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/9758/251584/pacific-carmeron-50-trang-den-thumb-1-600x600.jpg" class="lazyload" alt="MTB Pacific Carmeron 5.0" width=210 height=210>
-                            </div>
-                            <p class='result-label temp5'><img width='20' height='20' class='lazyload' alt='TẾT 2022 GIẢM SỐC' data-src='https://cdn.tgdd.vn/2020/10/content/icon5-50x50.png'><span>TẾT 2022 GIẢM SỐC</span></p>
-                            <h3>Xe đạp địa hình MTB Pacific Carmeron 5.0 27.5 inch</h3>
-                            <div class="item-compare">
-                                <span>B&#xE1;nh 27.5&quot;</span>
-                                <span>S&#x1B0;&#x1EDD;n h&#x1EE3;p kim nh&#xF4;m</span>
-                            </div>
-                            <div class="box-p">
-                                <p class="price-old black">15.190.000&#x20AB;</p>
-                                <span class="percent">-20%</span>
-                            </div>
-                            <strong class="price">12.152.000&#x20AB;</strong>
-                            <p class="item-gift">Quà <b>310.000₫</b></p>
-                        </a>
-                    </div>
-                    <div class="item" data-id="234166" data-pos="8">
-                        <a href='/may-lanh/lg-v10enh1' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="False" data-name="M&#xE1;y l&#x1EA1;nh LG Inverter 1 HP V10ENH1" data-id="234166" data-price="9790000.0" data-brand="LG" data-cate="M&#xE1;y l&#x1EA1;nh" data-box="BoxHome">
-                            <div class="item-label">
-                                <span class="lb-tragop">Tra&#x309; go&#x301;p 0%</span>
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/2002/234166/lg-v10enh1-thumb1-550x160.jpg" class="lazyload" alt="LG Inverter 1 HP V10ENH1" width=210 height=210>
-                            </div>
-                            <p class='result-label temp4'><img width='20' height='20' class='lazyload' alt='GIẢM THÊM TIỀN' data-src='https://cdn.tgdd.vn/2020/10/content/icon4-50x50.png'><span>GIẢM THÊM TIỀN</span></p>
-                            <h3>LG Inverter 1 HP V10ENH1</h3>
-                            <strong class="price">9.790.000&#x20AB;</strong>
-                            <p class="item-gift">Giảm thêm <b>300.000₫</b> và Quà <b>290.000₫</b></p>
-                            <div class="item-rating">
-                                <p>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-dark"></i>
-                                    <i class="icon-star-dark"></i>
-                                </p>
-                                <p class="item-rating-total">89</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item" data-id="262648" data-pos="9">
-                        <a href='/noi-chien-khong-dau/ava-hb-8033-42-lit' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="False" data-name="N&#x1ED3;i chi&#xEA;n kh&#xF4;ng d&#x1EA7;u Ava HB-8033 3.8 l&#xED;t" data-id="262648" data-price="1323000.0" data-brand="Ava" data-cate="N&#x1ED3;i chi&#xEA;n kh&#xF4;ng d&#x1EA7;u" data-box="BoxHome">
-                            <div class="item-label">
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/9418/262648/noi-chien-khong-dau-ava-hb-8033-600x600.jpg" class="lazyload" alt="N&#x1ED3;i chi&#xEA;n kh&#xF4;ng d&#x1EA7;u Ava HB-8033 3.8 l&#xED;t" width=210 height=210>
-                            </div>
-                            <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='Giảm sốc' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>Giảm sốc</span></p>
-                            <h3>Nồi chiên không dầu Ava HB-8033 3.8 lít</h3>
-                            <div class="box-p">
-                                <p class="price-old black">1.890.000&#x20AB;</p>
-                                <span class="percent">-30%</span>
-                            </div>
-                            <strong class="price">1.323.000&#x20AB;</strong>
-                        </a>
-                    </div>
-                    <div class="item" data-id="211629" data-pos="10">
-                        <a href='/may-giat/aqua-aqd-d850e-w' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="False" data-name="M&#xE1;y gi&#x1EB7;t Aqua Inverter 8.5 kg AQD-D850E W" data-id="211629" data-price="7990000.0" data-brand="Aqua" data-cate="M&#xE1;y gi&#x1EB7;t" data-box="BoxHome">
-                            <div class="item-label">
-                                <span class="lb-tragop">Tra&#x309; go&#x301;p 0%</span>
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/1944/211629/aqua-aqd-d850e-w-21-300x300.jpg" class="lazyload" alt="Aqua Inverter 8.5 Kg AQD-D850E W" width=210 height=210>
-                            </div>
-                            <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='Giảm Sốc' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>Giảm Sốc</span></p>
-                            <h3>Aqua Inverter 8.5 Kg AQD-D850E W</h3>
-                            <div class="box-p">
-                                <p class="price-old black">10.490.000&#x20AB;</p>
-                                <span class="percent">-23%</span>
-                            </div>
-                            <strong class="price">7.990.000&#x20AB;</strong>
-                            <div class="item-rating">
-                                <p>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-dark"></i>
-                                </p>
-                                <p class="item-rating-total">103</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item" data-id="237805" data-pos="11">
-                        <a href='/bep-tu/doi-bluestone-icb-6833' class=" main-contain" data-s="OnlineSavingCMS" data-site="2" data-pro="3" data-cache="False" data-name="B&#x1EBF;p t&#x1EEB; &#x111;&#xF4;i l&#x1EAF;p &#xE2;m Bluestone ICB-6833" data-id="237805" data-price="6990000.0" data-brand="Bluestone" data-cate="B&#x1EBF;p t&#x1EEB;" data-box="BoxHome">
-                            <div class="item-label">
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/1982/237805/doi-bluestone-icb-6833-1-300x300.jpg" class="lazyload" alt="B&#x1EBF;p &#xE2;m Bluestone ICB-6833" width=210 height=210>
-                            </div>
-                            <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='100 SUẤT GIẢM SỐC' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>100 SUẤT GIẢM SỐC</span></p>
-                            <h3>Bếp từ đôi lắp âm Bluestone ICB-6833</h3>
-                            <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
-                            <div class="box-p">
-                                <p class="price-old black">10.000.000&#x20AB;</p>
-                                <span class="percent">-30%</span>
-                            </div>
-                            <strong class="price">6.990.000&#x20AB;</strong>
-                        </a>
-                    </div>
-                    <div class="item" data-id="236937" data-pos="12">
-                        <a href='/tivi/led-lg-55up7800ptb' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="False" data-name="Smart Tivi LG 4K 55 inch 55UP7800PTB" data-id="236937" data-price="17500000.0" data-brand="LG" data-cate="Tivi" data-box="BoxHome">
-                            <div class="item-label">
-                                <span class="lb-tragop">Tra&#x309; go&#x301;p 0%</span>
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/1942/236937/TimerThumb/led-lg-55up7800ptb-(5).jpeg" class="lazyload" alt="LG Smart TV 55UP7800PTB" width=210 height=210>
-                                <img src="https://cdn.tgdd.vn/ValueIcons/Label_01-05.png" width="40" height="40" class="lazyload lbliconimg lbliconimg_1942 dmx" />
-                            </div>
-                            <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='Giảm Sốc' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>Giảm Sốc</span></p>
-                            <h3>LG Smart TV 55UP7800PTB</h3>
-                            <div class="item-compare">
-                                <span>55 inch</span>
-                                <span>4K</span>
-                            </div>
-                            <div class="box-p">
-                                <p class="price-old black">22.900.000&#x20AB;</p>
-                                <span class="percent">-23%</span>
-                            </div>
-                            <strong class="price">17.500.000&#x20AB;</strong>
-                            <p class="item-gift">Quà <b>600.000₫</b></p>
-                            <div class="item-rating">
-                                <p>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                </p>
-                                <p class="item-rating-total">64</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item" data-id="268383" data-pos="13">
-                        <a href='/xe-dap/gammax-24-qingyun-30-21s-24-inch' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="False" data-name="Xe &#x111;&#x1EA1;p &#x111;&#x1ECB;a h&#xEC;nh MTB Gammax 24-QINGYUN-3.0-21S 24 inch" data-id="268383" data-price="4872000.0" data-brand="Gammax" data-cate="Xe &#x111;&#x1EA1;p" data-box="BoxHome">
-                            <div class="item-label">
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/9758/268383/gammax-24-qingyun-30-21s-24-inch-vang-thumb-1-2-600x600.jpg" class="lazyload" alt="MTB Gammax 24-QINGYUN-3.0-21S" width=210 height=210>
-                            </div>
-                            <h3>Xe đạp địa hình MTB Gammax 24-QINGYUN-3.0-21S 24 inch</h3>
-                            <div class="item-compare">
-                                <span>B&#xE1;nh 24&quot;</span>
-                                <span>S&#x1B0;&#x1EDD;n h&#x1EE3;p kim nh&#xF4;m</span>
-                            </div>
-                            <div class="box-p">
-                                <p class="price-old black">6.090.000&#x20AB;</p>
-                                <span class="percent">-20%</span>
-                            </div>
-                            <strong class="price">4.872.000&#x20AB;</strong>
-                            <p class="item-gift">Quà <b>310.000₫</b></p>
-                        </a>
-                    </div>
-                    <div class="item" data-id="239280" data-pos="14">
-                        <a href='/tu-lanh/toshiba-gr-rt535we-pmv-06-mg' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="False" data-name="T&#x1EE7; l&#x1EA1;nh Toshiba Inverter 407 l&#xED;t GR-RT535WE-PMV(06)-MG" data-id="239280" data-price="15490000.0" data-brand="Toshiba" data-cate="T&#x1EE7; l&#x1EA1;nh" data-box="BoxHome">
-                            <div class="item-label">
-                                <span class="lb-tragop">Tra&#x309; go&#x301;p 0%</span>
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/1943/239280/toshiba-gr-rt535we-pmv-06-mg-300x300.jpg" class="lazyload" alt="Toshiba Inverter 407 l&#xED;t GR-RT535WE-PMV(06)-MG" width=210 height=210>
-                                <img src="https://cdn.tgdd.vn/ValueIcons/Label_01-05.png" width="40" height="40" class="lazyload lbliconimg lbliconimg_1943 dmx" />
-                            </div>
-                            <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='Giảm sốc' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>Giảm sốc</span></p>
-                            <h3>Toshiba Inverter 407 lít GR-RT535WE-PMV(06)-MG</h3>
-                            <div class="box-p">
-                                <p class="price-old black">18.090.000&#x20AB;</p>
-                                <span class="percent">-14%</span>
-                            </div>
-                            <strong class="price">15.490.000&#x20AB;</strong>
-                        </a>
-                    </div>
-                    <div class="item" data-id="235791" data-pos="15">
-                        <a href='/tivi/led-4k-samsung-ua50au8100' class=" main-contain" data-s="OnlineSavingCMS" data-site="2" data-pro="3" data-cache="False" data-name="Smart Tivi Samsung 4K Crystal UHD 50 inch UA50AU8100" data-id="235791" data-price="15600000.0" data-brand="Samsung" data-cate="Tivi" data-box="BoxHome">
-                            <div class="item-label">
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/1942/235791/TimerThumb/led-4k-samsung-ua50au8100-(20).jpeg" class="lazyload" alt="Samsung Smart TV Crystal UHD UA50AU8100" width=210 height=210>
-                                <img src="https://cdn.tgdd.vn/ValueIcons/Label_01-05.png" width="40" height="40" class="lazyload lbliconimg lbliconimg_1942 dmx" />
-                            </div>
-                            <p class='result-label temp5'><img width='20' height='20' class='lazyload' alt='Tết 2022 Giảm Sốc' data-src='https://cdn.tgdd.vn/2020/10/content/icon5-50x50.png'><span>Tết 2022 Giảm Sốc</span></p>
-                            <h3>Samsung Smart TV Crystal UHD UA50AU8100</h3>
-                            <div class="item-compare">
-                                <span>50 inch</span>
-                                <span>4K</span>
-                            </div>
-                            <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
-                            <div class="box-p">
-                                <p class="price-old black">18.900.000&#x20AB;</p>
-                                <span class="percent">-17%</span>
-                            </div>
-                            <strong class="price">15.600.000&#x20AB;</strong>
-                            <div class="item-rating">
-                                <p>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-dark"></i>
-                                </p>
-                                <p class="item-rating-total">71</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item" data-id="236160" data-pos="16">
-                        <a href='/may-giat/samsung-inverter-10kg-ww10ta046ae-sv' class=" main-contain" data-s="OnlineSavingCMS" data-site="2" data-pro="3" data-cache="False" data-name="M&#xE1;y gi&#x1EB7;t Samsung Inverter 10kg WW10TA046AE/SV" data-id="236160" data-price="7890000.0" data-brand="Samsung" data-cate="M&#xE1;y gi&#x1EB7;t" data-box="BoxHome">
-                            <div class="item-label">
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/1944/236160/samsung-inverter-10kg-ww10ta046ae-sv-281221-062735-600x600.jpg" class="lazyload" alt="Samsung Inverter 10 Kg WW10TA046AE/SV" width=210 height=210>
-                            </div>
-                            <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='Giảm Sốc' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>Giảm Sốc</span></p>
-                            <h3>Samsung Inverter 10 Kg WW10TA046AE/SV</h3>
-                            <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
-                            <div class="box-p">
-                                <p class="price-old black">15.090.000&#x20AB;</p>
-                                <span class="percent">-47%</span>
-                            </div>
-                            <strong class="price">7.890.000&#x20AB;</strong>
-                            <div class="item-rating">
-                                <p>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-half"></i>
-                                    <i class="icon-star-dark"></i>
-                                </p>
-                                <p class="item-rating-total">30</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item" data-id="242055" data-pos="17">
-                        <a href='/xe-dap/british-girl-jy909-16-16-inch-hong' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="False" data-name="Xe &#x111;&#x1EA1;p tr&#x1EBB; em Stitch British girl JY909-16 16 inch" data-id="242055" data-price="2040000.0" data-brand="Stitch" data-cate="Xe &#x111;&#x1EA1;p" data-box="BoxHome">
-                            <div class="item-label">
-                                <span class="lb-tragop">Tra&#x309; go&#x301;p 0%</span>
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/9758/242055/british-girl-jy909-thumb-hong-thumb-600x600.jpg" class="lazyload" alt="Xe tr&#x1EBB; em Stitch British girl JY909-16" width=210 height=210>
-                            </div>
-                            <p class='result-label temp5'><img width='20' height='20' class='lazyload' alt='TẾT 2022 GIẢM SỐC' data-src='https://cdn.tgdd.vn/2020/10/content/icon5-50x50.png'><span>TẾT 2022 GIẢM SỐC</span></p>
-                            <h3>Xe đạp trẻ em Stitch British girl JY909-16 16 inch</h3>
-                            <div class="item-compare">
-                                <span>B&#xE1;nh 16&quot;</span>
-                                <span>S&#x1B0;&#x1EDD;n th&#xE9;p</span>
-                            </div>
-                            <div class="box-p">
-                                <p class="price-old black">2.550.000&#x20AB;</p>
-                                <span class="percent">-20%</span>
-                            </div>
-                            <strong class="price">2.040.000&#x20AB;</strong>
-                            <p class="item-gift">Quà <b>120.000₫</b></p>
-                        </a>
-                    </div>
-                    <div class="item" data-id="236126" data-pos="18">
-                        <a href='/loc-nuoc-khong-dien/tren-bon-rua-cleansui-et101-ime' class=" main-contain" data-s="OnlineSavingCMS" data-site="2" data-pro="3" data-cache="False" data-name="Thi&#x1EBF;t b&#x1ECB; l&#x1ECD;c n&#x1B0;&#x1EDB;c tr&#xEA;n b&#x1ED3;n r&#x1EED;a Mitsubishi Cleansui ET101" data-id="236126" data-price="4990000.0" data-brand="Mitsubishi Cleansui" data-cate="L&#x1ECD;c n&#x1B0;&#x1EDB;c kh&#xF4;ng &#x111;i&#x1EC7;n" data-box="BoxHome">
-                            <div class="item-label">
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/9678/236126/tren-bon-rua-cleansui-et101-ime-300x300.jpg" class="lazyload" alt="Thi&#x1EBF;t b&#x1ECB; l&#x1ECD;c n&#x1B0;&#x1EDB;c tr&#xEA;n b&#x1ED3;n r&#x1EED;a Mitsubishi Cleansui ET101" width=210 height=210>
-                            </div>
-                            <p class='result-label temp1'><img width='20' height='20' class='lazyload' alt='50 SUẤT GIẢM SỐC' data-src='https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png'><span>50 SUẤT GIẢM SỐC</span></p>
-                            <h3>Thiết bị lọc nước trên bồn rửa Mitsubishi Cleansui ET101</h3>
-                            <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
-                            <div class="box-p">
-                                <p class="price-old black">6.500.000&#x20AB;</p>
-                                <span class="percent">-23%</span>
-                            </div>
-                            <strong class="price">4.990.000&#x20AB;</strong>
-                        </a>
-                    </div>
-                    <div class="item" data-id="249894" data-pos="19">
-                        <a href='/xe-dap/mtb-totem-w790-27-5-inch-den-cam-m' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="False" data-name="Xe &#x111;&#x1EA1;p &#x111;&#x1ECB;a h&#xEC;nh MTB Totem W790 27.5 inch Size M" data-id="249894" data-price="6552000.0" data-brand="Totem" data-cate="Xe &#x111;&#x1EA1;p" data-box="BoxHome">
-                            <div class="item-label">
-                                <span class="lb-tragop">Tra&#x309; go&#x301;p 0%</span>
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/9758/249894/mtb-totem-w790-27-5-inch-den-cam-thumb-600x600.jpg" class="lazyload" alt="MTB Totem W790 Size M" width=210 height=210>
-                            </div>
-                            <p class='result-label temp5'><img width='20' height='20' class='lazyload' alt='TẾT 2022 GIẢM SỐC' data-src='https://cdn.tgdd.vn/2020/10/content/icon5-50x50.png'><span>TẾT 2022 GIẢM SỐC</span></p>
-                            <h3>Xe đạp địa hình MTB Totem W790 27.5 inch Size M</h3>
-                            <div class="item-compare">
-                                <span>B&#xE1;nh 27.5&quot;</span>
-                                <span>S&#x1B0;&#x1EDD;n h&#x1EE3;p kim nh&#xF4;m</span>
-                            </div>
-                            <div class="box-p">
-                                <p class="price-old black">8.190.000&#x20AB;</p>
-                                <span class="percent">-20%</span>
-                            </div>
-                            <strong class="price">6.552.000&#x20AB;</strong>
-                            <p class="item-gift">Quà <b>310.000₫</b></p>
-                        </a>
-                    </div>
-                    <div class="item" data-id="235792" data-pos="20">
-                        <a href='/tivi/led-4k-samsung-ua55au8100' class=" main-contain" data-s="OnlineSavingCMS" data-site="2" data-pro="3" data-cache="False" data-name="Smart Tivi Samsung 4K Crystal UHD 55 inch UA55AU8100" data-id="235792" data-price="17600000.0" data-brand="Samsung" data-cate="Tivi" data-box="BoxHome">
-                            <div class="item-label">
-                            </div>
-                            <div class="item-img">
-                                <img data-src="https://cdn.tgdd.vn/Products/Images/1942/235792/TimerThumb/led-4k-samsung-ua55au8100-(5).jpg" class="lazyload" alt="Samsung Smart TV Crystal UHD UA55AU8100" width=210 height=210>
-                                <img src="https://cdn.tgdd.vn/ValueIcons/Label_01-05.png" width="40" height="40" class="lazyload lbliconimg lbliconimg_1942 dmx" />
-                            </div>
-                            <p class='result-label temp5'><img width='20' height='20' class='lazyload' alt='Tết 2022 Giảm Sốc' data-src='https://cdn.tgdd.vn/2020/10/content/icon5-50x50.png'><span>Tết 2022 Giảm Sốc</span></p>
-                            <h3>Samsung Smart TV Crystal UHD UA55AU8100</h3>
-                            <div class="item-compare">
-                                <span>55 inch</span>
-                                <span>4K</span>
-                            </div>
-                            <p class="item-txt-online">Online gia&#x301; re&#x309;</p>
-                            <div class="box-p">
-                                <p class="price-old black">21.900.000&#x20AB;</p>
-                                <span class="percent">-19%</span>
-                            </div>
-                            <strong class="price">17.600.000&#x20AB;</strong>
-                            <div class="item-rating">
-                                <p>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                </p>
-                                <p class="item-rating-total">18</p>
-                            </div>
-                        </a>
-                    </div>
+
+                    @endforeach
+                    
                 </div>
+
+
+
+
+                @endif
                 <a class="readmore-btn" href="https://www.dienmayxanh.com/flashsale#game"><span>Xem tất cả</span></a>
             </div>
             <!-- End -->
@@ -1439,17 +996,19 @@
 
             <?php
 
-                $data = App\Models\product::where('Group_id', 1)->get();
+                // $data = App\Models\product::where('Group_id', 1)->get();
 
-            
+                $group = App\Models\groupProduct::get();
 
-
+               
              ?>   
-            <!-- Tivi, loa karaoke & dàn âm thanh -->
+            @for($i =0; $i <count($group); $i++)
+
+                <?php $data = App\Models\product::where('Group_id', $group[$i]->id)->get(); ?>
             <div class="box-common _cate_1942">
                 <ul class="box-common__tab">
-                    <li class="active-tab" data-cate-id="1942">Tivi</li>
-                    <li data-cate-id="2162" data-prop-value-ids="90016">Loa karaoke, Dàn âm thanh</li>
+                    <li class="active-tab" data-cate-id="1942">{{  @$group[$i]->name }}</li>
+                    <!-- <li data-cate-id="2162" data-prop-value-ids="90016">Loa karaoke, Dàn âm thanh</li> -->
                 </ul>
                 <div class="box-common__main relative">
                     <div class="preloader">
@@ -1463,7 +1022,7 @@
                             <div class="item"  data-pos="1">
                                 <a href='/{{ $datas->Link }}' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="True" data-name="{{ $datas->Name }}" data-id="238784" data-price="20900000.0" data-brand="Sony" data-cate="Tivi" data-box="BoxHome">
                                     <div class="item-label">
-                                        <span class="lb-tragop">Tra&#x309; go&#x301;p 0%</span>
+                                        <span class="lb-tragop">Trả góp 0%</span>
                                     </div>
                                     <div class="item-img">
                                         <img data-src="{{ $datas->Image }}" class="lazyload" alt="{{ $datas->Name }}" width=210 height=210>
@@ -1492,10 +1051,11 @@
                             @endif
                             
                         </div>
-                        <a class="readmore-txt blue" href="/tivi"><span>Xem tất cả <b>147</b> Tivi</span></a>
+                        <!-- <a class="readmore-txt blue" href="/tivi"><span>Xem tất cả <b>147</b> Tivi</span></a> -->
                     </div>
                 </div>
             </div>
+            @endfor
             <!-- End  -->
          
          
