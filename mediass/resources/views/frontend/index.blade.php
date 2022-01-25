@@ -952,7 +952,7 @@
                     @foreach($product_sale as  $value)
 
                     <div class="item">
-                        <a href='/may-giat/may-giat-lg-inverter-85-kg-fv1408s4w' class=" main-contain" data-s="OnlineSavingCMS" data-site="2" data-pro="3" data-cache="False" data-name="M&#xE1;y gi&#x1EB7;t LG Inverter 8.5 kg FV1408S4W" data-id="227121" data-price="8840000.0" data-brand="LG" data-cate="M&#xE1;y gi&#x1EB7;t" data-box="BoxHome">
+                        <a href='{{ route('details', $value->Link) }}' class=" main-contain" data-s="OnlineSavingCMS" data-site="2" data-pro="3" data-cache="False" data-name="M&#xE1;y gi&#x1EB7;t LG Inverter 8.5 kg FV1408S4W" data-id="227121" data-price="8840000.0" data-brand="LG" data-cate="M&#xE1;y gi&#x1EB7;t" data-box="BoxHome">
                             <div class="item-label">
                             </div>
                             <div class="item-img">
@@ -1013,6 +1013,8 @@
 
                             @if(count($data)>0)
                             @foreach($data as $datas)
+
+
                             <div class="item"  data-pos="1">
                                 <a href='/{{ $datas->Link }}' class=" main-contain" data-s="Nomal" data-site="2" data-pro="3" data-cache="True" data-name="{{ $datas->Name }}" data-id="238784" data-price="20900000.0" data-brand="Sony" data-cate="Tivi" data-box="BoxHome">
                                     <div class="item-label">

@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/category/{slug}', 'Frontend\categoryController@index')->name('category-product');
 
-Route::get('/detail', 'Frontend\categoryController@details');
+Route::get('/{slug}', 'Frontend\categoryController@details')->name('details');
 
 
 
