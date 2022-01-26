@@ -3,7 +3,7 @@
 
 <!DOCTYPE html>
 
-<!-- code -->
+<!-- codes -->
 <html lang="vi-VN">
     <head>
         <meta charset="utf-8" />
